@@ -181,7 +181,7 @@ header {
   -webkit-font-smoothing: antialiased;
   margin-bottom: 20px;
   background-color: white;
-  border: 3px groove #000;
+  border: 10px groove #000;
   margin-top: 400px;
 }
 
@@ -204,20 +204,28 @@ header {
 }
 
 .about-main h2 {
-  font-size: 64px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 1.4;
 }
 
-.about-main h4 {
+.about-main h3 {
   font-weight: 200;
-  font-size: 15px;
-  color:black;
+  font-size: 40px;
+  color:white;
+
   font-weight: bold;
+  margin-top: 80px;
+}
+.about-main span{
+  color:black;
+  font-size: 80px;
+  background-color: white;
+  border: 5px groove #000;
 }
 
 .about-img {
-  margin-top: 200px;
+  margin-top: 100px;
   width: 84%;
 }
 
