@@ -14,8 +14,14 @@
       <div class="header-logo">
         <% if @current_user %>
           <%= link_to("ZoraTweet", "/posts/index") %>
+          <li>
+            <%= link_to("ZoraTweetとは", "/about") %>
+          </li>
         <% else %>
           <%= link_to("ZoraTweet", "/") %>
+          <li>
+            <%= link_to("ZoraTweetとは", "/about") %>
+          </li>
         <% end %>
       </div>
       <ul class="header-menus">
@@ -23,22 +29,21 @@
           <li class="btn-b">
             <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
           </li>
-          <li class="btn">
+          <li>
             <%= link_to("投稿一覧", "/posts/index") %>
           </li>
-          <li class="btn">
+          <li>
             <%= link_to("新規投稿", "/posts/new") %>
           </li>
-          <li class="btn">
+          <li>
             <%= link_to("ユーザー一覧", "/users/index") %>
           </li>
-          <li class="btn">
+          <li >
             <%= link_to("ログアウト", "/logout", {method: :post}) %>
           </li>
+        </ul>
         <% else %>
-          <li class="btn">
-            <%= link_to("ZoraTweetとは", "/about") %>
-          </li>
+        <ul class="btn">
           <li class="btn">
             <%= link_to("新規登録", "/signup") %>
           </li>
