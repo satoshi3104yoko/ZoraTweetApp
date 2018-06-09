@@ -5,7 +5,9 @@
   font-size: 30px;
   color: #000;
 }
-
+.container{
+  max-width: 750px;
+}
 .users-index-item {
   padding: 20px 30px;
   background-color: white;
@@ -16,8 +18,8 @@
 }
 
 .user-left img {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 40%;
   box-shadow: 0 2px 6px #c1ced7;
   object-fit: cover;
@@ -25,6 +27,7 @@
 
 .user-name a {
   font-weight: 600;
+
 }
 
 .user-name a:hover {
@@ -43,6 +46,9 @@
   display: table-cell;
   vertical-align: middle;
 }
+.user-right a{
+  font-size: 50px;
+}
 
 /* users/show ================================ */
 .user-show {
@@ -54,8 +60,8 @@
 }
 
 .user img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 40%;
   box-shadow: 0 2px 6px #c1ced7;
   margin: 20px 0 10px;
@@ -63,7 +69,7 @@
 }
 
 .user h2 {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -77,6 +83,7 @@
   color: #8899a6;
   text-decoration: underline;
   font-weight: 200;
+  font-size: 25px;
 }
 
 .user span {
@@ -108,6 +115,7 @@
   display: inline-block;
   padding: 16px 30px;
   color: #afb6bf;
+  font-size: 30px;
 }
 
 /* users/new, users/edit ================================ */
