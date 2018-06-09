@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(
       name: params[:name],
-      email: params[:email],
+      # email: params[:email],
       image_name: "default_user.jpg",
       password: params[:password]
     )
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
-    @user.email = params[:email]
+    # @user.email = params[:email]
 
     if params[:image]
       @user.image_name = "#{@user.id}.jpg"
@@ -58,14 +58,17 @@ class UsersController < ApplicationController
   end
 
   def login
-    @user = User.find_by(email: params[:email], password: params[:password])
+    @user = User.find_by(name: params[:name], password: params[:password])
+    # @user = User.find_by(email: params[:email], password: params[:password])
     if @user
       session[:user_id] = @user.id
       flash[:notice] = "ログインしました"
       redirect_to("/posts/index")
     else
-      @error_message = "メールアドレスまたはパスワードが間違っています"
-      @email = params[:email]
+      @error_message = "ユーザー名またはパスワードが間違っています"
+      # @error_message = "メールアドレスまたはパスワードが間違っています"
+      # @email = params[:email]
+      @name = params[:name]
       @password = params[:password]
       render("users/login_form")
     end
